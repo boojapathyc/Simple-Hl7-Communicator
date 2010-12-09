@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Simple HL7 Integrated Test Bed with Jar-in-Jar Loader">
+<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+<!--ANT 1.7 is required                                        -->
+<target name="create_run_jar">
+<jar destfile="/Users/boojapc/Desktop/Simple_HL7_Tester.jar">
+<manifest>
+<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+<attribute name="Rsrc-Main-Class" value="hl7.tester.AppMain"/>
+<attribute name="Class-Path" value="."/>
+<attribute name="Rsrc-Class-Path" value="./ hapi-base-1.0.jar hapi-structures-v231-1.0.jar hapi-structures-v24-1.0.jar commons-logging-1.1.1.jar xercesImpl.jar"/>
+</manifest>
+<zipfileset src="jar-in-jar-loader.zip"/>
+<fileset dir="/Users/boojapc/Documents/dev_workspace/Simple HL7 Integrated Test Bed/bin"/>
+<zipfileset dir="/Users/boojapc/Documents/dev_workspace/Simple HL7 Integrated Test Bed/lib" includes="hapi-base-1.0.jar"/>
+<zipfileset dir="/Users/boojapc/Documents/dev_workspace/Simple HL7 Integrated Test Bed/lib" includes="hapi-structures-v231-1.0.jar"/>
+<zipfileset dir="/Users/boojapc/Documents/dev_workspace/Simple HL7 Integrated Test Bed/lib" includes="hapi-structures-v24-1.0.jar"/>
+<zipfileset dir="/Users/boojapc/Documents/dev_workspace/Simple HL7 Integrated Test Bed/lib" includes="commons-logging-1.1.1.jar"/>
+<zipfileset dir="/Users/boojapc/Documents/dev_workspace/Simple HL7 Integrated Test Bed/lib" includes="xercesImpl.jar"/>
+</jar>
+</target>
+</project>
